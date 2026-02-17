@@ -14,40 +14,40 @@
 
 body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: #6b3f2a;
+  background: #6b3f2a;   /* barna */
   color: #ffffff;
   line-height: 1.6;
 }
 
 /* =========================
-   HERO / BANNER
-   CSAK AKKOR LÁTSZIK, HA VAN KÉP
+   BANNER (STABIL, 2040-BIZTOS)
 ========================= */
 
 .hero {
-  display: none; /* ← EZ A KULCS */
-}
-
-/* ha később AKTÍVÁLNI akarod, csak ezt add hozzá HTML-ben:
-   <body class="has-hero">
-*/
-
-.has-hero .hero {
-  display: flex;
   height: 280px;
-  background-image: url("images/banner.jpg");
+
+  /* JAVÍTÁS: abszolút stabil útvonal */
+  background-image: url("/images/banner.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 
+/* Overlay marad, ez jó */
 .hero-overlay {
   background: rgba(0,0,0,0.45);
   padding: 20px 30px;
   border-radius: 12px;
 }
+
+/* =========================
+   HERO SZÖVEG
+========================= */
 
 .hero h1 {
   font-size: 2.2rem;
@@ -66,23 +66,16 @@ body {
 main {
   max-width: 900px;
   margin: auto;
-  padding: 36px 20px 28px;
+  padding: 45px 20px;
 }
 
-/* =========================
-   SZEKCIÓK – RITMUS
-========================= */
-
+/* szekció */
 section {
-  margin-bottom: 34px;
-}
-
-section:last-child {
-  margin-bottom: 0;
+  margin-bottom: 50px;
 }
 
 /* =========================
-   SZÖVEG
+   SZÖVEG – EZ A LÉNYEG
 ========================= */
 
 p {
@@ -100,13 +93,13 @@ section p:last-child {
 
 h2 {
   font-size: 1.6rem;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 h3 {
   font-size: 1.15rem;
-  margin-top: 1.4em;
-  margin-bottom: 0.5em;
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
 }
 
 /* =========================
@@ -115,11 +108,10 @@ h3 {
 
 ul {
   list-style: none;
-  margin-top: 8px;
 }
 
 li {
-  margin: 6px 0;
+  margin: 10px 0;
 }
 
 /* =========================
@@ -142,19 +134,7 @@ a:hover {
 
 @media (max-width: 600px) {
 
-  main {
-    padding: 28px 16px 22px;
-  }
-
-  section {
-    margin-bottom: 26px;
-  }
-
-  p {
-    line-height: 1.5;
-  }
-
-  .has-hero .hero {
+  .hero {
     height: 200px;
   }
 
@@ -165,6 +145,10 @@ a:hover {
   .hero p {
     font-size: 0.95rem;
   }
+
+  p {
+    line-height: 1.5;
+  }
 }
 
 /* =========================
@@ -173,7 +157,7 @@ a:hover {
 
 footer {
   text-align: center;
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   opacity: 0.8;
   font-size: 0.9rem;
 }
