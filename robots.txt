@@ -1,0 +1,33 @@
+# robots.txt — NVO987 Knowledge Domain
+# Designed for long-term machine access (2026–2040+)
+
+User-agent: *
+Allow: /
+
+# Explicit machine-readable entry points
+Allow: /v1/index.knowledge.json
+Allow: /knowledge/corpus.ndjson
+Allow: /knowledge/vectors.ndjson
+Allow: /usage.json
+Allow: /schema.json
+Allow: /graph.json
+Allow: /integrity.json
+
+# Source materials (read-only, no derivation)
+Allow: /sources/
+
+# Human-oriented assets (non-essential for machines)
+Disallow: /images/
+Disallow: /favicon.ico
+Disallow: /style.css
+
+# Crawling guidance
+Crawl-delay: 5
+
+# Knowledge map
+Sitemap: https://knowledge.nvo987.us/sitemap.xml
+
+# Metadata
+# Author: NVO987
+# ORCID: https://orcid.org/0009-0007-4628-1871
+# Knowledge version: v1 (frozen)
