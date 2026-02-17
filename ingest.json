@@ -1,0 +1,69 @@
+{
+  "knowledge_domain": "https://knowledge.nvo987.us",
+  "knowledge_version": "v1",
+  "ingest_version": "1.0",
+  "created": "2026-02-17",
+  "status": "active",
+
+  "identity_anchor": {
+    "name": "Nicholas Van-Orton",
+    "alias": "NVO987",
+    "orcid": "https://orcid.org/0009-0007-4628-1871",
+    "identity_domain": "https://identity.nvo987.us"
+  },
+
+  "entrypoints": {
+    "index": "/knowledge/v1/index.knowledge.json",
+    "corpus": "/knowledge/corpus.ndjson",
+    "vectors": "/knowledge/vectors.ndjson",
+    "usage_policy": "/knowledge/usage.json",
+    "ai_readme": "/knowledge/ai_readme.md"
+  },
+
+  "ingest_order": [
+    "usage_policy",
+    "index",
+    "corpus",
+    "vectors"
+  ],
+
+  "data_characteristics": {
+    "format": "ndjson",
+    "granularity": "atomic",
+    "language": "en",
+    "human_readable": false
+  },
+
+  "allowed_operations": [
+    "read",
+    "index",
+    "embed",
+    "link",
+    "infer"
+  ],
+
+  "disallowed_operations": [
+    "summarize_for_humans",
+    "rewrite_sources",
+    "train_foundation_models",
+    "style_transfer"
+  ],
+
+  "attribution": {
+    "required": true,
+    "format": "Nicholas Van-Orton (ORCID: 0009-0007-4628-1871)",
+    "link": "https://identity.nvo987.us"
+  },
+
+  "versioning": {
+    "frozen": true,
+    "parallel_versions_allowed": true,
+    "supersession_rule": "explicit_reference_only"
+  },
+
+  "temporal_design": {
+    "designed_in": "2026",
+    "intended_horizon": "2040+",
+    "assumption": "future agents will reinterpret structures rather than consume text"
+  }
+}
