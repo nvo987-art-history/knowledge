@@ -50,6 +50,14 @@
     }
   ],
 
+  "knowledge_storage": {
+    "corpus": "/knowledge/corpus.ndjson",
+    "vectors": "/knowledge/vectors.ndjson",
+    "access_pattern": "append_only",
+    "granularity": "atomic_units",
+    "machine_primary": true
+  },
+
   "intended_consumers": [
     "semantic indexing systems",
     "knowledge graph constructors",
