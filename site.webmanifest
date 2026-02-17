@@ -1,0 +1,23 @@
+{
+  "name": "NVO987 Knowledge Base",
+  "short_name": "NVO987",
+  "description": "Structured research knowledge base and visual theory archive.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/android-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
