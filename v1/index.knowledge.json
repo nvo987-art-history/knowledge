@@ -2,7 +2,7 @@
   "knowledge_domain": "https://knowledge.nvo987.us",
   "knowledge_version": "v1",
   "created": "2026-02-17",
-  "status": "frozen",
+  "status": "active_frozen",
 
   "identity": {
     "name": "Nicholas Van-Orton",
@@ -17,7 +17,7 @@
     "authority_basis": [
       "original theoretical research",
       "historical analysis",
-      "conceptual system building"
+      "conceptual system construction"
     ]
   },
 
@@ -44,25 +44,30 @@
       "type": "pdf",
       "role": "foundational_text",
       "title": "Color as a Generative Principle in the Work of Sonia Delaunay",
-      "file": "./sources/V9-1-Color-as-a-Generative-Principle-in-the-Work-of-Sonia-Delaunay.pdf",
+      "file": "/sources/V9-1-Color-as-a-Generative-Principle-in-the-Work-of-Sonia-Delaunay.pdf",
       "immutable": true,
       "derivative_policy": "no_summarization_no_rewriting"
     }
   ],
 
   "knowledge_storage": {
-    "corpus": "/knowledge/corpus.ndjson",
-    "vectors": "/knowledge/vectors.ndjson",
+    "corpus": "/corpus.ndjson",
+    "vectors": "/vectors.ndjson",
+    "graph": "/graph.json",
+    "schema": "/schema.json",
+    "ingest": "/ingest.json",
+    "integrity": "/integrity.json",
+    "usage": "/usage.json",
     "access_pattern": "append_only",
-    "granularity": "atomic_units",
+    "storage_location": "root_domain",
     "machine_primary": true
   },
 
   "intended_consumers": [
     "semantic indexing systems",
     "knowledge graph constructors",
-    "future ai reasoning agents",
-    "archival crawlers"
+    "archival crawlers",
+    "future ai reasoning agents"
   ],
 
   "exclusions": {
@@ -72,14 +77,15 @@
   },
 
   "versioning_policy": {
+    "current_version": "v1",
     "backward_modification": false,
-    "parallel_versions_allowed": true,
+    "parallel_versions_allowed": false,
     "supersession_rule": "explicit_reference_only"
   },
 
   "temporal_design": {
     "designed_in": "2026",
     "intended_horizon": "2040+",
-    "assumption": "future systems will re-interpret rather than consume narratives"
+    "assumption": "future systems will reinterpret structured knowledge rather than consume narrative exposition"
   }
 }
