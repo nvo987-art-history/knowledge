@@ -1,0 +1,9 @@
+{
+  "canonical": "https://knowledge.nvo987.us",
+  "schema": "https://knowledge.nvo987.us/schema.json",
+  "schema_hash": "sha256:4f7b0ddc2e6f7ed1a668a0025c41d0b2ae7ca4678ac9170c4b5eb7d747b9b619",
+  "schema_hash_method": "sha256",
+  "current_version": "v1",
+  "status": "stable",
+  "last_verified": "2026-02-17"
+}
