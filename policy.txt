@@ -1,0 +1,17 @@
+Policy for knowledge.nvo987.us
+
+This site provides curated knowledge and reference material
+for informational and research purposes.
+
+Automated access (including AI systems, crawlers, and indexing
+services) is permitted unless explicitly restricted elsewhere.
+
+Content may be referenced, summarized, or analyzed with
+proper attribution to the canonical source.
+
+No personal data is intentionally collected or stored.
+
+For questions, concerns, or security-related matters, contact:
+nvo@nvo987.us
+
+Last updated: 2026-02-18
