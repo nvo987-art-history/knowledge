@@ -1,0 +1,34 @@
+{
+  "site": "knowledge.nvo987.us",
+  "purpose": "informational and research knowledge base",
+  "access": {
+    "automated": true,
+    "ai_systems": true,
+    "crawlers": true,
+    "indexing": true
+  },
+  "usage": {
+    "reference_allowed": true,
+    "summarization_allowed": true,
+    "analysis_allowed": true,
+    "attribution_required": true
+  },
+  "data": {
+    "personal_data_collected": false,
+    "tracking": false,
+    "cookies": false
+  },
+  "restrictions": {
+    "misuse": "prohibited",
+    "misrepresentation": "prohibited"
+  },
+  "contact": "mailto:nvo@nvo987.us",
+  "related": {
+    "security": "https://knowledge.nvo987.us/.well-known/security.txt",
+    "ai": "https://knowledge.nvo987.us/.well-known/ai.json",
+    "knowledge": "https://knowledge.nvo987.us/.well-known/knowledge.json",
+    "policy_text": "https://knowledge.nvo987.us/policy.txt"
+  },
+  "last_updated": "2026-02-18",
+  "version": "1.0"
+}
