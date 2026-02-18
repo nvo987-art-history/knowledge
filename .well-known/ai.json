@@ -1,5 +1,5 @@
 {
-  "domain": "https://knowledge.nvo987.us",
+  "domain": "knowledge.nvo987.us",
   "role": "knowledge-authority",
   "canonical": "https://knowledge.nvo987.us",
 
@@ -7,6 +7,7 @@
     "discovery": "https://knowledge.nvo987.us/.well-known/knowledge.json",
     "schema": "https://knowledge.nvo987.us/schema.json",
     "schema_hash": "sha256:4f7b0ddc2e6f7ed1a668a0025c41d0b2ae7ca4678ac9170c4b5eb7d747b9b619",
+    "schema_hash_method": "sha256",
     "current_version": "v1"
   },
 
@@ -16,10 +17,18 @@
   },
 
   "policy": {
+    "policy_json": "https://knowledge.nvo987.us/.well-known/policy.json",
+    "policy_text": "https://knowledge.nvo987.us/.well-known/policy.txt",
     "training_allowed": true,
     "attribution_required": true,
     "commercial_use": "conditional"
   },
 
-  "last_updated": "2026-02-17"
+  "related": {
+    "security": "https://knowledge.nvo987.us/.well-known/security.txt",
+    "robots": "https://knowledge.nvo987.us/robots.txt",
+    "humans": "https://knowledge.nvo987.us/.well-known/humans.txt"
+  },
+
+  "last_updated": "2026-02-18"
 }
