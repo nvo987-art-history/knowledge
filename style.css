@@ -1,1 +1,164 @@
+/* =========================
+   RESET
+========================= */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #6b3f2a;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* =========================
+   HERO / BANNER
+========================= */
+
+.hero {
+  height: 280px;
+  background-image: url("/images/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  background: rgba(0,0,0,0.45);
+  padding: 20px 30px;
+  border-radius: 12px;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  opacity: 0.95;
+}
+
+/* =========================
+   MAIN  ✅ JAVÍTVA
+========================= */
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 28px 20px 45px;
+  overflow: hidden; /* ← EZ OLDJA MEG A HIBÁT */
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+  margin-bottom: 50px;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+p {
+  line-height: 1.55;
+  margin-bottom: 1.1em;
+}
+
+section p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
+}
+
+/* =========================
+   LISTS
+========================= */
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 10px 0;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+  color: #ffe6d5;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    height: 200px;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  main {
+    padding: 24px 18px 40px;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
