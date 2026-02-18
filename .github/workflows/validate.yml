@@ -1,0 +1,72 @@
+name: NVO987 Full Code Validator
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install validators
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq tidy libxml2-utils
+
+      - name: Validate JSON files
+        run: |
+          echo "🔍 JSON validation"
+          find . -type f -name "*.json" ! -path "./.git/*" | while read f; do
+            echo "→ $f"
+            jq empty "$f"
+          done
+
+      - name: Validate NDJSON files
+        run: |
+          echo "🔍 NDJSON validation"
+          find . -type f -name "*.ndjson" ! -path "./.git/*" | while read f; do
+            echo "→ $f"
+            nl -ba "$f" | while read n line; do
+              echo "$line" | jq empty >/dev/null
+            done
+          done
+
+      - name: Validate XML files
+        run: |
+          echo "🔍 XML validation"
+          find . -type f -name "*.xml" ! -path "./.git/*" | while read f; do
+            echo "→ $f"
+            xmllint --noout "$f"
+          done
+
+      - name: Validate HTML files
+        run: |
+          echo "🔍 HTML validation"
+          find . -type f -name "*.html" ! -path "./.git/*" | while read f; do
+            echo "→ $f"
+            tidy -errors -q "$f" || true
+          done
+
+      - name: Check empty files
+        run: |
+          echo "🔍 Empty file check"
+          find . -type f ! -path "./.git/*" | while read f; do
+            if [ ! -s "$f" ]; then
+              echo "❌ Empty file: $f"
+              exit 1
+            fi
+          done
+
+      - name: Check required assets
+        run: |
+          echo "🔍 Required files"
+          test -f avatar.png || test -f avatar.jpg
+          test -f og-image.jpg
+          test -f .well-known/knowledge.json
+
+      - name: Final status
+        run: echo "✅ All files validated successfully"
