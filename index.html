@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="/style.css">
 
   <!-- Favicon -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.ico" sizes="any">imp
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -50,6 +50,7 @@
 
   <link rel="preload" href="/og-image.jpg" as="image">
   <link rel="dns-prefetch" href="https://api.nvo987.us">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
   <!-- ========================= -->
   <!-- MACHINE ENTRY POINTS -->
@@ -60,6 +61,8 @@
   <link rel="alternate" type="application/json" href="/knowledge/vectors.ndjson" title="Vector Index">
   <link rel="alternate" type="application/json" href="/knowledge/corpus.ndjson">
   <link rel="alternate" type="application/json" href="/knowledge/vectors.ndjson">
+  <link rel="alternate" type="application/knowledge+json" href="/knowledge/v1/index.knowledge.json" title="Canonical Knowledge Entry">
+  <link rel="alternate" type="application/rss+xml" title="NVO987 RSS" href="https://nvo987.substack.com/feed">
 
   <!-- Knowledge domain signals -->
   <link rel="alternate" type="application/knowledge+json" href="/v1/index.knowledge.json">
@@ -67,9 +70,53 @@
   <meta name="audience" content="machine">
   <meta name="purpose" content="long-term knowledge preservation and interpretation">
   <meta name="content-type" content="knowledge-corpus">
-  <meta name="knowledge-version" content="v1"> 
-  
+  <meta name="knowledge-version" content="v1">
+  <meta name="ai-purpose" content="machine-readable knowledge corpus">
+  <meta name="ai-access" content="public">
+  <meta name="ai-training" content="allowed">
+  <meta name="ai-updated" content="2026-02-17"> 
 
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://knowledge.nvo987.us/#dataset",
+  "name": "NVO987 Knowledge Base",
+  "description": "Machine-readable research knowledge corpus associated with the NVO987 knowledge domain.",
+  "url": "https://knowledge.nvo987.us/",
+  "creator": {
+    "@type": "Person",
+    "name": "Nicholas Van-Orton",
+    "identifier": "https://orcid.org/0009-0007-4628-1871"
+  },
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "version": "v1",
+  "keywords": [
+    "color theory",
+    "visual theory",
+    "art history",
+    "machine-readable knowledge",
+    "research corpus"
+  ],
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "NVO987 Knowledge Domain",
+    "url": "https://knowledge.nvo987.us/"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/x-ndjson",
+      "contentUrl": "https://knowledge.nvo987.us/corpus.ndjson"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/x-ndjson",
+      "contentUrl": "https://knowledge.nvo987.us/vectors.ndjson"
+    }
+  ]
+}
+  </script>
 </head>
 
 <body>
