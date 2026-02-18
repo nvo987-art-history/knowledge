@@ -17,6 +17,8 @@ body {
   background: #6b3f2a;   /* barna */
   color: #ffffff;
   line-height: 1.6;
+
+  overflow-x: hidden; /* ← CSAK EZ A JAVÍTÁS */
 }
 
 /* =========================
