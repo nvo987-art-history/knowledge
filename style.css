@@ -9,16 +9,6 @@
 }
 
 /* =========================
-   HTML  ← EZ HIÁNYZOTT
-========================= */
-
-html {
-  background: #6b3f2a;
-  margin: 0;
-  padding: 0;
-}
-
-/* =========================
    BODY
 ========================= */
 
@@ -63,17 +53,14 @@ body {
 }
 
 /* =========================
-   MAIN
+   MAIN  ✅ JAVÍTVA
 ========================= */
 
 main {
   max-width: 900px;
   margin: 0 auto;
   padding: 28px 20px 45px;
-}
-
-main section:first-child {
-  margin-top: 0;
+  overflow: hidden; /* ← EZ OLDJA MEG A HIBÁT */
 }
 
 /* =========================
@@ -174,4 +161,4 @@ footer {
   margin-top: 3rem;
   opacity: 0.8;
   font-size: 0.9rem;
-}
+     }
