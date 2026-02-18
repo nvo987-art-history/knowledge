@@ -9,15 +9,6 @@
 }
 
 /* =========================
-   HTML + BODY (FIX)
-========================= */
-
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-/* =========================
    BODY
 ========================= */
 
@@ -34,8 +25,8 @@ body {
 
 .hero {
   height: 280px;
-  width: 100%; /* ← EZ VOLT A HIÁNYZÓ DARAB */
 
+  /* háttér */
   background-image: url("/images/banner.jpg");
   background-size: cover;
   background-position: center;
@@ -45,9 +36,12 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+
+  /* >>> JAVÍTÁS: mobil felső UI sáv eltüntetése <<< */
+  margin-top: calc(env(safe-area-inset-top) * -1);
 }
 
-/* Overlay marad */
+/* Overlay marad, ez jó */
 .hero-overlay {
   background: rgba(0,0,0,0.45);
   padding: 20px 30px;
@@ -78,12 +72,13 @@ main {
   padding: 45px 20px;
 }
 
+/* szekció */
 section {
   margin-bottom: 50px;
 }
 
 /* =========================
-   SZÖVEG
+   SZÖVEG – EZ A LÉNYEG
 ========================= */
 
 p {
