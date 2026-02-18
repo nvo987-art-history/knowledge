@@ -14,19 +14,17 @@
 
 body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: #6b3f2a;   /* barna */
+  background: #6b3f2a;
   color: #ffffff;
   line-height: 1.6;
 }
 
 /* =========================
-   BANNER (STABIL, 2040-BIZTOS)
+   HERO / BANNER
 ========================= */
 
 .hero {
   height: 280px;
-
-  /* háttér */
   background-image: url("/images/banner.jpg");
   background-size: cover;
   background-position: center;
@@ -36,21 +34,13 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-
-  /* >>> JAVÍTÁS: mobil felső UI sáv eltüntetése <<< */
-  margin-top: calc(env(safe-area-inset-top) * -1);
 }
 
-/* Overlay marad, ez jó */
 .hero-overlay {
   background: rgba(0,0,0,0.45);
   padding: 20px 30px;
   border-radius: 12px;
 }
-
-/* =========================
-   HERO SZÖVEG
-========================= */
 
 .hero h1 {
   font-size: 2.2rem;
@@ -63,22 +53,30 @@ body {
 }
 
 /* =========================
-   MAIN
+   MAIN  ← ITT VOLT A HIBA
 ========================= */
 
 main {
   max-width: 900px;
-  margin: auto;
-  padding: 45px 20px;
+  margin: 0 auto;
+  padding: 28px 20px 45px;   /* 🔧 FELÜL CSÖKKENTVE */
 }
 
-/* szekció */
+/* 🔧 ELSŐ SZEKCIÓ NE CSÚSSZON LE */
+main section:first-child {
+  margin-top: 0;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
 section {
   margin-bottom: 50px;
 }
 
 /* =========================
-   SZÖVEG – EZ A LÉNYEG
+   TEXT
 ========================= */
 
 p {
@@ -91,7 +89,7 @@ section p:last-child {
 }
 
 /* =========================
-   CÍMEK
+   HEADINGS
 ========================= */
 
 h2 {
@@ -106,7 +104,7 @@ h3 {
 }
 
 /* =========================
-   LISTÁK
+   LISTS
 ========================= */
 
 ul {
@@ -118,7 +116,7 @@ li {
 }
 
 /* =========================
-   LINKEK
+   LINKS
 ========================= */
 
 a {
@@ -132,7 +130,7 @@ a:hover {
 }
 
 /* =========================
-   MOBIL
+   MOBILE
 ========================= */
 
 @media (max-width: 600px) {
@@ -147,6 +145,10 @@ a:hover {
 
   .hero p {
     font-size: 0.95rem;
+  }
+
+  main {
+    padding: 24px 18px 40px;  /* 🔧 MOBILON IS KORRIGÁLVA */
   }
 
   p {
