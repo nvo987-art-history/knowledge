@@ -9,6 +9,15 @@
 }
 
 /* =========================
+   HTML + BODY (FIX)
+========================= */
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* =========================
    BODY
 ========================= */
 
@@ -17,8 +26,6 @@ body {
   background: #6b3f2a;   /* barna */
   color: #ffffff;
   line-height: 1.6;
-
-  overflow-x: hidden; /* ← CSAK EZ A JAVÍTÁS */
 }
 
 /* =========================
@@ -27,8 +34,8 @@ body {
 
 .hero {
   height: 280px;
+  width: 100%; /* ← EZ VOLT A HIÁNYZÓ DARAB */
 
-  /* JAVÍTÁS: abszolút stabil útvonal */
   background-image: url("/images/banner.jpg");
   background-size: cover;
   background-position: center;
@@ -40,7 +47,7 @@ body {
   text-align: center;
 }
 
-/* Overlay marad, ez jó */
+/* Overlay marad */
 .hero-overlay {
   background: rgba(0,0,0,0.45);
   padding: 20px 30px;
@@ -71,13 +78,12 @@ main {
   padding: 45px 20px;
 }
 
-/* szekció */
 section {
   margin-bottom: 50px;
 }
 
 /* =========================
-   SZÖVEG – EZ A LÉNYEG
+   SZÖVEG
 ========================= */
 
 p {
