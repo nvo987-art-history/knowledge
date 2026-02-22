@@ -8,20 +8,20 @@
   </url>
 
   <url>
-    <loc>https://knowledge.nvo987.us/corpus.ndjson</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://knowledge.nvo987.us/vectors.ndjson</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
     <loc>https://knowledge.nvo987.us/v1/index.knowledge.json</loc>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://knowledge.nvo987.us/v1/corpus.ndjson</loc>
+    <changefreq>never</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://knowledge.nvo987.us/v1/vectors.ndjson</loc>
+    <changefreq>never</changefreq>
     <priority>0.8</priority>
   </url>
 
