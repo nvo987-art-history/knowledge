@@ -1,0 +1,142 @@
+{
+  "$id": "https://knowledge.nvo987.us/v1/schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+  "schema_version": "1.0",
+  "version": "1.0",
+
+  "knowledge_domain": "https://knowledge.nvo987.us",
+  "knowledge_version": "v1",
+
+  "governance": {
+    "policy": "https://knowledge.nvo987.us/.well-known/policy.json",
+    "authority": "https://identity.nvo987.us",
+    "orcid": "https://orcid.org/0009-0007-4628-1871",
+    "canonical_domain": "https://knowledge.nvo987.us",
+    "versioning_model": "explicit_version_reference_only"
+  },
+
+  "created": "2026-02-17",
+  "status": "stable",
+
+  "design_principles": {
+    "atomic_units": true,
+    "human_narrative": false,
+    "machine_interpretability": true,
+    "future_agent_compatibility": true,
+    "provenance_preservation_required": true
+  },
+
+  "entrypoints": {
+    "index": "/v1/index.knowledge.json",
+    "corpus": "/v1/corpus.ndjson",
+    "vectors": "/v1/vectors.ndjson",
+    "usage": "/v1/usage.json",
+    "graph": "/v1/graph.json"
+  },
+
+  "entity_types": {
+    "concept": {
+      "description": "Abstract theoretical construct or principle.",
+      "required_fields": [
+        "id",
+        "type",
+        "title",
+        "definition",
+        "epistemic_status",
+        "created"
+      ],
+      "optional_fields": [
+        "label",
+        "notes",
+        "supported_by"
+      ]
+    },
+
+    "claim": {
+      "description": "A propositional statement derived from one or more concepts.",
+      "required_fields": [
+        "id",
+        "type",
+        "claim",
+        "derived_from",
+        "created"
+      ],
+      "optional_fields": [
+        "confidence",
+        "scope",
+        "supported_by"
+      ]
+    },
+
+    "source": {
+      "description": "Canonical external or internal reference supporting concepts or claims.",
+      "required_fields": [
+        "id",
+        "type",
+        "media",
+        "title",
+        "file"
+      ],
+      "optional_fields": [
+        "immutable",
+        "citation",
+        "year",
+        "author",
+        "authorial_framework"
+      ]
+    },
+
+    "vector": {
+      "description": "Semantic vector mapping associated with a corpus entity.",
+      "required_fields": [
+        "id",
+        "corpus_id",
+        "vector_type",
+        "semantic_axes",
+        "created"
+      ],
+      "optional_fields": [
+        "embedding_hint"
+      ]
+    }
+  },
+
+  "relation_types": {
+    "derived_from": {
+      "from": "claim",
+      "to": "concept",
+      "cardinality": "many_to_one",
+      "description": "Claim is conceptually derived from a concept."
+    },
+
+    "supported_by": {
+      "from": ["concept", "claim"],
+      "to": "source",
+      "cardinality": "many_to_many",
+      "description": "Concept or claim is supported by a canonical source."
+    },
+
+    "vectorizes": {
+      "from": "vector",
+      "to": ["concept", "claim", "source"],
+      "cardinality": "one_to_one",
+      "description": "Vector representation of a corpus entity."
+    }
+  },
+
+  "constraints": {
+    "id_uniqueness": true,
+    "cross_file_reference_allowed": true,
+    "backward_modification": false,
+    "implicit_relations_disallowed": true,
+    "policy_compliance_required": true
+  },
+
+  "temporal_policy": {
+    "frozen_schema": true,
+    "schema_supersession": "explicit_version_reference_only",
+    "intended_horizon": "2040+",
+    "interpretation_model": "future_agents_reinterpret_structure_not_text"
+  }
+}
