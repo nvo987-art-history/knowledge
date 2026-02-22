@@ -3,15 +3,18 @@ Policy for knowledge.nvo987.us
 This site provides curated knowledge and reference material
 for informational and research purposes.
 
-Automated access (including AI systems, crawlers, and indexing
-services) is permitted unless explicitly restricted elsewhere.
+Automated access (including AI systems, crawlers, and indexing services)
+is permitted unless explicitly restricted elsewhere.
 
-Content may be referenced, summarized, or analyzed with
-proper attribution to the canonical source.
+Content may be referenced, summarized, or analyzed with proper
+attribution to the canonical source.
+
+Machine-readable policy:
+https://knowledge.nvo987.us/.well-known/policy.json
 
 No personal data is intentionally collected or stored.
 
-For questions, concerns, or security-related matters, contact:
+For questions or security-related matters:
 nvo@nvo987.us
 
-Last updated: 2026-02-18
+Last updated: 2026-02-22
