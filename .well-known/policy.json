@@ -1,9 +1,23 @@
 {
   "domain": "knowledge.nvo987.us",
+  "role": "knowledge-policy",
+
+  "governance": {
+    "authority": "https://identity.nvo987.us",
+    "relationship": "governed-by"
+  },
+
   "policy_version": "v1",
-  "training_allowed": true,
-  "attribution_required": true,
-  "commercial_use": "conditional",
+  "status": "active",
+
+  "permissions": {
+    "training_allowed": true,
+    "attribution_required": true,
+    "commercial_use": "conditional",
+    "derivatives_allowed": true
+  },
+
   "human_readable": "https://knowledge.nvo987.us/.well-known/policy.txt",
-  "last_updated": "2026-02-17"
+
+  "last_updated": "2026-02-22"
 }
