@@ -1,6 +1,8 @@
 {
   "domain": "knowledge.nvo987.us",
   "role": "knowledge-policy",
+  "canonical": "https://knowledge.nvo987.us/.well-known/policy.json",
+  "version": "1.1",
 
   "permissions": {
     "training_allowed": true,
