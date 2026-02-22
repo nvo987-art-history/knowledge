@@ -1,3 +1,16 @@
+/* TEAM */
 Owner: nvo987
-Contact: nvo@nvo987.us
-Purpose: Knowledge archive
+Role: Knowledge Authority Operator
+
+/* CONTACT */
+Email: nvo@nvo987.us
+Website: https://knowledge.nvo987.us
+
+/* PURPOSE */
+Knowledge archive and structured knowledge authority node
+
+/* GOVERNANCE */
+Identity Authority: https://identity.nvo987.us
+
+/* LAST UPDATED */
+2026-02-22 
