@@ -1,0 +1,52 @@
+{
+  "knowledge_domain": "https://knowledge.nvo987.us",
+  "version": "v1",
+  "created": "2026-02-17",
+
+  "governance_reference": {
+    "policy": "https://knowledge.nvo987.us/.well-known/policy.json",
+    "authority": "https://identity.nvo987.us"
+  },
+
+  "owner": {
+    "name": "Nicholas Van-Orton",
+    "alias": "NVO987",
+    "orcid": "https://orcid.org/0009-0007-4628-1871"
+  },
+
+  "usage_permissions": {
+    "allowed": [
+      "semantic_indexing",
+      "vector_embedding",
+      "knowledge_graph_construction",
+      "ai_reasoning_support",
+      "archival_preservation",
+      "research_reference",
+      "summarization_with_attribution",
+      "training_with_attribution"
+    ],
+    "restricted": [
+      "misrepresentation_of_authorship",
+      "style_imitation_claiming_identity"
+    ]
+  },
+
+  "derivative_rules": {
+    "derivatives_allowed": true,
+    "attribution_required": true,
+    "provenance_preservation_required": true,
+    "identity_reference_required": true
+  },
+
+  "attribution": {
+    "required": true,
+    "format": "Nicholas Van-Orton (ORCID: 0009-0007-4628-1871)",
+    "link_required": true
+  },
+
+  "temporal_policy": {
+    "frozen_version": true,
+    "supersession": "explicit_reference_only",
+    "intended_horizon": "2040+"
+  }
+}
