@@ -3,7 +3,7 @@
   "knowledge_version": "v1",
   "ingest_version": "1.0",
   "created": "2026-02-17",
-  "status": "active",
+  "status": "active_frozen",
 
   "identity_anchor": {
     "name": "Nicholas Van-Orton",
@@ -13,11 +13,11 @@
   },
 
   "entrypoints": {
-    "index": "/knowledge/v1/index.knowledge.json",
-    "corpus": "/knowledge/corpus.ndjson",
-    "vectors": "/knowledge/vectors.ndjson",
-    "usage_policy": "/knowledge/usage.json",
-    "ai_readme": "/knowledge/ai_readme.md"
+    "index": "/v1/index.knowledge.json",
+    "corpus": "/v1/corpus.ndjson",
+    "vectors": "/v1/vectors.ndjson",
+    "usage_policy": "/v1/usage.json",
+    "graph": "/v1/graph.json"
   },
 
   "ingest_order": [
@@ -45,7 +45,7 @@
   "disallowed_operations": [
     "summarize_for_humans",
     "rewrite_sources",
-    "train_foundation_models",
+    "train_foundation_models_without_explicit_license",
     "style_transfer"
   ],
 
