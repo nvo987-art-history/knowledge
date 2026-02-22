@@ -1,17 +1,8 @@
-# robots.txt — NVO987 Knowledge Domain
-# Machine-readable knowledge corpus
-# Designed for long-term automated access (2026–2040+)
+# robots.txt — knowledge.nvo987.us
+# Public knowledge domain
+# Long-term automated access permitted
 
 User-agent: *
 Allow: /
 
-# Explicit machine entry points
-Allow: /v1/index.knowledge.json
-Allow: /corpus.ndjson
-Allow: /vectors.ndjson
-Allow: /schema.json
-Allow: /graph.json
-Allow: /integrity.json
-Allow: /usage.json
-
-Sitemap: https://knowledge.nvo987.us/sitemap.xml
+Sitemap: https://knowledge.nvo987.us/sitemap.xml 
