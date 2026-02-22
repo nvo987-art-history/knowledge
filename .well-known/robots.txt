@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://knowledge.nvo987.us/sitemap.xml 
