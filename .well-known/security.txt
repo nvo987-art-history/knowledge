@@ -1,3 +1,5 @@
 Contact: mailto:nvo@nvo987.us
+Canonical: https://knowledge.nvo987.us/.well-known/security.txt
 Preferred-Languages: en, hu
-Expires: 2026-02-18T23:59:59Z
+Policy: https://knowledge.nvo987.us/.well-known/policy.txt
+Expires: 2027-02-22T23:59:59Z 
