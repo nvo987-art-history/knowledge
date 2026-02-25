@@ -73,20 +73,19 @@ jobs:
           set -e
           echo "Knowledge structural validation"
 
-          if [ -d "knowledge/v1" ]; then
-            cd knowledge/v1
-          else
-            echo "knowledge/v1 directory not found"
+          corpus_file=$(find . -type f -name "corpus.ndjson" ! -path "./.git/*" | head -n 1)
+          vectors_file=$(find . -type f -name "vectors.ndjson" ! -path "./.git/*" | head -n 1)
+
+          if [ -z "$corpus_file" ] || [ -z "$vectors_file" ]; then
+            echo "corpus.ndjson or vectors.ndjson not found"
             exit 1
           fi
 
-          if [ ! -f corpus.ndjson ] || [ ! -f vectors.ndjson ]; then
-            echo "Required knowledge files missing"
-            exit 1
-          fi
+          echo "Using corpus file: $corpus_file"
+          echo "Using vectors file: $vectors_file"
 
           echo "Collect corpus IDs"
-          corpus_ids=$(cat corpus.ndjson | jq -r '.id')
+          corpus_ids=$(cat "$corpus_file" | jq -r '.id')
 
           echo "Check duplicate corpus IDs"
           dup=$(echo "$corpus_ids" | sort | uniq -d)
@@ -96,14 +95,14 @@ jobs:
           fi
 
           echo "Check duplicate vector IDs"
-          dupv=$(cat vectors.ndjson | jq -r '.id' | sort | uniq -d)
+          dupv=$(cat "$vectors_file" | jq -r '.id' | sort | uniq -d)
           if [ -n "$dupv" ]; then
             echo "Duplicate vector ID detected: $dupv"
             exit 1
           fi
 
           echo "Validate vector to corpus references"
-          cat vectors.ndjson | jq -r '.corpus_id' | while read cid; do
+          cat "$vectors_file" | jq -r '.corpus_id' | while read cid; do
             echo "$corpus_ids" | grep -qx "$cid" || {
               echo "Vector references missing corpus ID: $cid"
               exit 1
