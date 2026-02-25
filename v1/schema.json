@@ -2,18 +2,25 @@
   "$id": "https://knowledge.nvo987.us/v1/schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
 
-  "schema_version": "1.0",
-  "version": "1.0",
+  "schema_version": "2.0",
+  "schema_role": "structural_ontology_descriptor",
 
   "knowledge_domain": "https://knowledge.nvo987.us",
   "knowledge_version": "v1",
 
   "governance": {
-    "policy": "https://knowledge.nvo987.us/.well-known/policy.json",
-    "authority": "https://identity.nvo987.us",
+    "did": "did:web:identity.nvo987.us",
+    "identity_domain": "https://identity.nvo987.us",
     "orcid": "https://orcid.org/0009-0007-4628-1871",
     "canonical_domain": "https://knowledge.nvo987.us",
     "versioning_model": "explicit_version_reference_only"
+  },
+
+  "id_policy": {
+    "format": "https://knowledge.nvo987.us/v1#<local-id>",
+    "fragment_based": true,
+    "globally_unique_required": true,
+    "dereference_requirement": "not_required_in_v1"
   },
 
   "created": "2026-02-17",
@@ -70,7 +77,7 @@
     },
 
     "source": {
-      "description": "Canonical external or internal reference supporting concepts or claims.",
+      "description": "Canonical reference supporting concepts or claims.",
       "required_fields": [
         "id",
         "type",
@@ -106,22 +113,17 @@
     "derived_from": {
       "from": "claim",
       "to": "concept",
-      "cardinality": "many_to_one",
-      "description": "Claim is conceptually derived from a concept."
+      "cardinality": "many_to_one"
     },
-
     "supported_by": {
       "from": ["concept", "claim"],
       "to": "source",
-      "cardinality": "many_to_many",
-      "description": "Concept or claim is supported by a canonical source."
+      "cardinality": "many_to_many"
     },
-
     "vectorizes": {
       "from": "vector",
       "to": ["concept", "claim", "source"],
-      "cardinality": "one_to_one",
-      "description": "Vector representation of a corpus entity."
+      "cardinality": "one_to_one"
     }
   },
 
