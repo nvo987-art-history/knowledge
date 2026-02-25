@@ -1,23 +1,28 @@
 {
-  "graph_version": "1.0",
-  "knowledge_domain": "https://knowledge.nvo987.us",
+  "graph_version": "2.0",
+  "knowledge_domain": "https://knowledge.nvo987.us/v1",
   "knowledge_version": "v1",
   "created": "2026-02-17",
   "status": "stable",
 
+  "identity_anchor": {
+    "did": "did:web:identity.nvo987.us",
+    "identity_domain": "https://identity.nvo987.us"
+  },
+
   "nodes": [
     {
-      "id": "nvo987-color-001",
+      "id": "https://knowledge.nvo987.us/v1#nvo987-color-001",
       "type": "concept",
       "label": "Color as Generative Principle"
     },
     {
-      "id": "nvo987-color-002",
+      "id": "https://knowledge.nvo987.us/v1#nvo987-color-002",
       "type": "claim",
       "label": "Color generates form independently of representation"
     },
     {
-      "id": "delaunay-v9-1",
+      "id": "https://knowledge.nvo987.us/v1#delaunay-v9-1",
       "type": "source",
       "label": "Color as a Generative Principle in the Work of Sonia Delaunay (PDF)"
     }
@@ -26,18 +31,18 @@
   "edges": [
     {
       "type": "derived_from",
-      "from": "nvo987-color-002",
-      "to": "nvo987-color-001"
+      "from": "https://knowledge.nvo987.us/v1#nvo987-color-002",
+      "to": "https://knowledge.nvo987.us/v1#nvo987-color-001"
     },
     {
       "type": "supported_by",
-      "from": "nvo987-color-001",
-      "to": "delaunay-v9-1"
+      "from": "https://knowledge.nvo987.us/v1#nvo987-color-001",
+      "to": "https://knowledge.nvo987.us/v1#delaunay-v9-1"
     },
     {
       "type": "supported_by",
-      "from": "nvo987-color-002",
-      "to": "delaunay-v9-1"
+      "from": "https://knowledge.nvo987.us/v1#nvo987-color-002",
+      "to": "https://knowledge.nvo987.us/v1#delaunay-v9-1"
     }
   ],
 
