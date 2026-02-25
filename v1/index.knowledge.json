@@ -1,5 +1,5 @@
 {
-  "domain": "knowledge.nvo987.us",
+  "domain": "https://knowledge.nvo987.us",
   "knowledge_version": "v1",
   "status": "frozen",
   "created": "2026-02-17",
@@ -8,7 +8,8 @@
   "description": "Canonical machine-readable entrypoint for NVO987 Knowledge Base v1.",
 
   "authority": {
-    "identity": "https://identity.nvo987.us",
+    "did": "did:web:identity.nvo987.us",
+    "identity_domain": "https://identity.nvo987.us",
     "orcid": "https://orcid.org/0009-0007-4628-1871"
   },
 
