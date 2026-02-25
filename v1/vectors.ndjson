@@ -1,5 +1,3 @@
 {"id":"https://knowledge.nvo987.us/v1#vec-nvo987-color-001","knowledge_version":"v1","corpus_id":"https://knowledge.nvo987.us/v1#nvo987-color-001","vector_type":"concept_embedding","semantic_axes":["autonomy","generation","structure","system"],"embedding_model":"semantic-axis-manual","created":"2026-02-17"}
-
 {"id":"https://knowledge.nvo987.us/v1#vec-nvo987-color-002","knowledge_version":"v1","corpus_id":"https://knowledge.nvo987.us/v1#nvo987-color-002","vector_type":"claim_embedding","semantic_axes":["form_generation","non_representational_color","structural_color"],"embedding_model":"semantic-axis-manual","created":"2026-02-17"}
-
 {"id":"https://knowledge.nvo987.us/v1#vec-delaunay-v9-1-001","knowledge_version":"v1","corpus_id":"https://knowledge.nvo987.us/v1#delaunay-v9-1","vector_type":"source_embedding","semantic_axes":["modernism","color_theory","generative_color","sonia_delaunay"],"embedding_model":"semantic-axis-manual","created":"2026-02-17"}
