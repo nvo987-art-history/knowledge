@@ -3,20 +3,24 @@
   "knowledge_version": "v1",
   "created": "2026-02-17",
 
-  "integrity_model": {
-    "type": "declarative",
-    "cryptographic_signatures": false,
-    "reason": "This version constitutes a foundational knowledge layer. Cryptographic signing is intentionally deferred in order to preserve structural flexibility during early-stage stabilization."
-  },
-
   "identity_binding": {
-    "authority": "personal authorship",
-    "name": "Nicholas Van-Orton",
-    "alternate_name": "NVO987",
-    "orcid": "https://orcid.org/0009-0007-4628-1871",
+    "did": "did:web:identity.nvo987.us",
     "identity_domain": "https://identity.nvo987.us",
     "primary_domain": "https://nvo987.us",
-    "binding_type": "self-declared authorship with public scholarly identifier"
+    "orcid": "https://orcid.org/0009-0007-4628-1871",
+    "binding_type": "self-declared authorship anchored to DID"
+  },
+
+  "integrity_model": {
+    "type": "declarative_foundational",
+    "cryptographic_signatures": false,
+    "hash_manifest_available": false,
+    "stability_basis": [
+      "explicit_version_isolation",
+      "internal_reference_consistency",
+      "frozen_namespace"
+    ],
+    "note": "v1 constitutes a structurally frozen knowledge layer without cryptographic attestation."
   },
 
   "integrity_scope": {
@@ -27,39 +31,28 @@
       "graph.json",
       "usage.json"
     ],
-    "excludes": [
-      "derived representations",
-      "future reinterpretations",
-      "external embeddings",
-      "machine-generated summaries",
-      "third-party transformations"
-    ],
-    "scope_definition": "The integrity scope applies strictly to the canonical files contained within the v1 directory and does not extend to derivative or externalized forms."
+    "scope_definition": "Applies strictly to canonical files within /v1/ namespace."
   },
 
   "mutation_policy": {
     "immutable_version": true,
     "backward_changes_allowed": false,
-    "supersession": "explicit_version_reference_only",
-    "policy_explanation": "Version v1 is frozen. Any structural, semantic, or epistemic modification requires explicit creation of a new version namespace."
+    "supersession": "explicit_version_reference_only"
   },
 
-  "verification_expectation": {
+  "verification_model": {
     "human_verification": true,
     "machine_verification": "semantic_consistency_validation",
-    "cryptographic_verification": "not_available_in_v1",
-    "verification_note": "Integrity in v1 is based on structural coherence, internal reference stability, and explicit version isolation rather than cryptographic attestation."
+    "cryptographic_verification": "not_enabled_in_v1"
   },
 
-  "future_provision": {
-    "planned": true,
-    "potential_mechanisms": [
-      "public_key_signing",
-      "content_hash_manifest",
-      "orcid-linked attestation",
-      "domain-anchored signature verification"
+  "future_integrity_layer": {
+    "upgrade_path": "v2_namespace_activation",
+    "possible_mechanisms": [
+      "sha256_content_manifest",
+      "public_key_signature",
+      "did-linked attestation"
     ],
-    "activation_condition": "explicit_version_upgrade",
-    "forward_compatibility_statement": "Future versions may introduce cryptographic integrity layers without altering the canonical structure of v1."
+    "forward_compatibility": "v1 remains structurally stable regardless of future cryptographic augmentation."
   }
 }
