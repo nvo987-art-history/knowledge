@@ -1,31 +1,31 @@
 {
   "domain": "knowledge.nvo987.us",
-  "role": "ai-node",
+  "node_type": "structured-knowledge-authority",
   "canonical": "https://knowledge.nvo987.us",
 
-  "governance": {
-    "authority": "did:web:identity.nvo987.us",
-    "relationship": "governed-by"
+  "authority": {
+    "did": "did:web:identity.nvo987.us",
+    "did_document": "https://identity.nvo987.us/.well-known/did.json"
   },
 
   "network": {
-    "parent": "https://identity.nvo987.us",
-    "lab": "https://lab.nvo987.us",
-    "brand": "https://nvo987.us"
+    "lab_node": "https://lab.nvo987.us",
+    "brand_domain": "https://nvo987.us"
   },
 
-  "ai_policy": {
-    "training_allowed": true,
-    "attribution_required": true,
+  "ai_permissions": {
+    "training": true,
+    "embedding": true,
+    "derivatives": true,
+    "automated_access": true,
     "commercial_use": "conditional",
-    "derivatives_allowed": true,
-    "automated_access": true
+    "attribution_required": true
   },
 
   "discovery": {
-    "knowledge": "https://knowledge.nvo987.us/.well-known/knowledge.json",
+    "corpus_root": "https://knowledge.nvo987.us/v1",
     "schema": "https://knowledge.nvo987.us/schema.json",
-    "policy_json": "https://knowledge.nvo987.us/.well-known/policy.json",
+    "policy": "https://knowledge.nvo987.us/.well-known/policy.json",
     "security": "https://knowledge.nvo987.us/.well-known/security.txt"
   },
 
@@ -34,5 +34,6 @@
     "root_manifest": "https://knowledge.nvo987.us/ROOT-SHA256SUMS"
   },
 
-  "last_updated": "2026-02-22"
+  "version_namespace": "v1",
+  "last_updated": "2026-02-26"
 }
