@@ -1,25 +1,23 @@
 {
   "domain": "knowledge.nvo987.us",
-  "role": "knowledge-authority",
-
+  "node_type": "knowledge-authority",
   "canonical": "https://knowledge.nvo987.us",
 
-  "governance": {
-    "authority": "https://identity.nvo987.us",
-    "authority_did": "did:web:identity.nvo987.us",
-    "relationship": "governed-by"
+  "authority": {
+    "did": "did:web:identity.nvo987.us",
+    "did_document": "https://identity.nvo987.us/.well-known/did.json",
+    "domain": "https://identity.nvo987.us"
   },
 
   "network": {
-    "lab": "https://lab.nvo987.us",
-    "brand": "https://nvo987.us"
+    "lab_node": "https://lab.nvo987.us",
+    "brand_domain": "https://nvo987.us"
   },
 
   "schema": "https://knowledge.nvo987.us/schema.json",
-
   "policy": "https://knowledge.nvo987.us/.well-known/policy.json",
 
-  "current_version": "v1",
-  "status": "provisional",
+  "namespace": "v1",
+  "status": "active",
   "last_verified": "2026-02-26"
 }
