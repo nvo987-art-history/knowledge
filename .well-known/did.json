@@ -1,5 +1,0 @@
-{
-  "@context": "https://www.w3.org/ns/did/v1",
-  "id": "https://knowledge.nvo987.us",
-  "controller": "did:web:identity.nvo987.us"
-}
