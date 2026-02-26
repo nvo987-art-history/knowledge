@@ -2,15 +2,22 @@
 Owner: nvo987
 Role: Knowledge Authority Operator
 
+/* NETWORK */
+Parent Identity: https://identity.nvo987.us
+DID Authority: did:web:identity.nvo987.us
+AI Lab: https://lab.nvo987.us
+Brand Site: https://nvo987.us
+
 /* CONTACT */
 Email: nvo@nvo987.us
 Website: https://knowledge.nvo987.us
 
 /* PURPOSE */
 Knowledge archive and structured knowledge authority node
+Part of the NVO987 organizational knowledge network
 
 /* GOVERNANCE */
 Identity Authority: https://identity.nvo987.us
 
 /* LAST UPDATED */
-2026-02-22 
+2026-02-26
