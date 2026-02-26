@@ -1,5 +1,14 @@
 Contact: mailto:nvo@nvo987.us
 Canonical: https://knowledge.nvo987.us/.well-known/security.txt
-Preferred-Languages: en, hu
 Policy: https://knowledge.nvo987.us/.well-known/policy.txt
-Expires: 2027-02-22T23:59:59Z 
+Encryption: https://identity.nvo987.us/pgp.asc
+Preferred-Languages: en, hu
+Expires: 2027-02-26T23:59:59Z
+
+# Governance
+Authority: https://identity.nvo987.us
+Authority-DID: did:web:identity.nvo987.us
+
+# Network
+AI-Lab: https://lab.nvo987.us
+Brand: https://nvo987.us
