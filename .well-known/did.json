@@ -1,5 +1,5 @@
 {
+  "@context": "https://www.w3.org/ns/did/v1",
   "id": "https://knowledge.nvo987.us",
-  "controller": "https://identity.nvo987.us",
-  "verificationMethod": null
+  "controller": "did:web:identity.nvo987.us"
 }
