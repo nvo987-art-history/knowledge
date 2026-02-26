@@ -1,30 +1,35 @@
 {
   "domain": "knowledge.nvo987.us",
-  "role": "knowledge-policy",
+  "node_type": "knowledge-policy",
   "canonical": "https://knowledge.nvo987.us/.well-known/policy.json",
-  "version": "1.1",
+  "policy_version": "1.1",
+
+  "authority": {
+    "did": "did:web:identity.nvo987.us",
+    "did_document": "https://identity.nvo987.us/.well-known/did.json",
+    "domain": "https://identity.nvo987.us"
+  },
 
   "permissions": {
-    "training_allowed": true,
-    "embedding_allowed": true,
-    "derivatives_allowed": true,
-    "analysis_allowed": true,
+    "training": true,
+    "embedding": true,
+    "derivatives": true,
+    "analysis": true,
     "commercial_use": "conditional"
   },
 
   "requirements": {
-    "attribution_required": true,
+    "attribution": true,
     "provenance_preservation": true,
-    "identity_reference": "https://identity.nvo987.us",
+    "authority_reference": "did:web:identity.nvo987.us",
     "orcid": "https://orcid.org/0009-0007-4628-1871"
   },
 
-  "governance": {
-    "authority": "https://identity.nvo987.us",
-    "canonical_domain": "https://knowledge.nvo987.us",
+  "scope": {
+    "applies_to": "https://knowledge.nvo987.us/v1",
     "versioning_model": "explicit_version_reference_only"
   },
 
   "status": "active",
-  "last_updated": "2026-02-22"
+  "last_updated": "2026-02-26"
 }
