@@ -1,58 +1,43 @@
 {
-  "knowledge_domain": "https://knowledge.nvo987.us",
-  "knowledge_version": "v1",
-  "created": "2026-02-17",
+  "integrity_schema_version": "1.0",
+  "namespace": "v1",
+  "domain": "knowledge.nvo987.us",
 
-  "identity_binding": {
+  "authority": {
     "did": "did:web:identity.nvo987.us",
     "identity_domain": "https://identity.nvo987.us",
     "primary_domain": "https://nvo987.us",
-    "orcid": "https://orcid.org/0009-0007-4628-1871",
-    "binding_type": "self-declared authorship anchored to DID"
+    "orcid": "https://orcid.org/0009-0007-4628-1871"
   },
 
-  "integrity_model": {
-    "type": "declarative_foundational",
-    "cryptographic_signatures": false,
-    "hash_manifest_available": false,
-    "stability_basis": [
-      "explicit_version_isolation",
-      "internal_reference_consistency",
-      "frozen_namespace"
-    ],
-    "note": "v1 constitutes a structurally frozen knowledge layer without cryptographic attestation."
-  },
+  "integrity_mode": "structural_frozen",
 
-  "integrity_scope": {
-    "covers": [
-      "index.knowledge.json",
-      "corpus.ndjson",
-      "vectors.ndjson",
-      "graph.json",
-      "usage.json"
-    ],
-    "scope_definition": "Applies strictly to canonical files within /v1/ namespace."
-  },
+  "files": [
+    "https://knowledge.nvo987.us/index.knowledge.json",
+    "https://knowledge.nvo987.us/v1/schema.json",
+    "https://knowledge.nvo987.us/v1/corpus.ndjson",
+    "https://knowledge.nvo987.us/v1/vectors.ndjson",
+    "https://knowledge.nvo987.us/v1/graph.json",
+    "https://knowledge.nvo987.us/v1/usage.json"
+  ],
 
   "mutation_policy": {
-    "immutable_version": true,
-    "backward_changes_allowed": false,
-    "supersession": "explicit_version_reference_only"
+    "immutable": true,
+    "backward_modification": false,
+    "supersession_model": "explicit_version_reference_only"
   },
 
-  "verification_model": {
-    "human_verification": true,
-    "machine_verification": "semantic_consistency_validation",
-    "cryptographic_verification": "not_enabled_in_v1"
+  "verification": {
+    "semantic_consistency_required": true,
+    "cryptographic_signatures": false,
+    "hash_manifest": null
   },
 
-  "future_integrity_layer": {
-    "upgrade_path": "v2_namespace_activation",
-    "possible_mechanisms": [
-      "sha256_content_manifest",
-      "public_key_signature",
-      "did-linked attestation"
-    ],
-    "forward_compatibility": "v1 remains structurally stable regardless of future cryptographic augmentation."
-  }
+  "upgrade_path": {
+    "next_integrity_layer": "hash_manifest + did_signature",
+    "namespace_trigger": "v2"
+  },
+
+  "created": "2026-02-17",
+  "last_verified": "2026-02-26"
 }
