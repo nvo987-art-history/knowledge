@@ -1,58 +1,40 @@
 {
-  "policy_version": "2.0",
-  "policy_type": "declarative_usage_framework",
+  "usage_schema_version": "1.0",
+  "namespace": "v1",
+  "domain": "knowledge.nvo987.us",
 
-  "knowledge_domain": "https://knowledge.nvo987.us",
-  "knowledge_version": "v1",
-  "created": "2026-02-17",
-
-  "authority": {
-    "did": "did:web:identity.nvo987.us",
-    "identity_domain": "https://identity.nvo987.us",
-    "primary_domain": "https://nvo987.us",
-    "orcid": "https://orcid.org/0009-0007-4628-1871"
+  "permissions": {
+    "training": "allowed_with_attribution",
+    "embedding": "allowed",
+    "knowledge_graph_construction": "allowed",
+    "derivatives": "allowed_with_attribution",
+    "commercial_use": "allowed_with_attribution",
+    "archival_preservation": "allowed"
   },
 
-  "usage_permissions": {
-    "allowed": [
-      "semantic_indexing",
-      "vector_embedding",
-      "knowledge_graph_construction",
-      "ai_reasoning_support",
-      "archival_preservation",
-      "research_reference",
-      "summarization_with_attribution",
-      "training_with_attribution"
-    ],
-    "restricted": [
-      "misrepresentation_of_authorship",
-      "style_imitation_claiming_identity"
-    ],
-    "attribution_required_for": [
-      "summarization",
-      "training",
-      "derivative_publication",
-      "research_reference"
-    ]
-  },
-
-  "derivative_rules": {
-    "derivatives_allowed": true,
-    "attribution_required": true,
-    "provenance_preservation_required": true,
-    "identity_reference_required": true
+  "prohibitions": {
+    "misrepresentation_of_authorship": true,
+    "identity_impersonation": true,
+    "removal_of_provenance": true
   },
 
   "attribution": {
     "required": true,
-    "format": "Nicholas Van-Orton (ORCID: 0009-0007-4628-1871)",
-    "identity_link": "https://identity.nvo987.us"
+    "name": "Nicholas Van-Orton",
+    "orcid": "0009-0007-4628-1871",
+    "identity_url": "https://identity.nvo987.us"
   },
 
-  "temporal_policy": {
-    "frozen_version": true,
-    "supersession": "explicit_version_reference_only",
-    "intended_horizon": "2040+",
-    "reinterpretation_allowed": true
-  }
+  "provenance_policy": {
+    "preservation_required": true,
+    "source_link_required": true
+  },
+
+  "mutation_policy": {
+    "namespace_frozen": true,
+    "supersession_model": "explicit_version_reference_only"
+  },
+
+  "created": "2026-02-17",
+  "last_updated": "2026-02-26"
 }
