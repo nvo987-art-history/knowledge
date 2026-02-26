@@ -1,1 +1,35 @@
-https://knowledge.nvo987.us/.well-known/policy.txt 
+NVO987 Knowledge Policy
+Domain: https://knowledge.nvo987.us
+Status: Active
+Version: 1.1
+Last Updated: 2026-02-26
+
+GOVERNING ORGANIZATION
+Name: NVO987
+Organization URL: https://identity.nvo987.us
+DID Authority: did:web:identity.nvo987.us
+
+NETWORK
+Parent Identity: https://identity.nvo987.us
+AI Lab Node: https://lab.nvo987.us
+Brand Site: https://nvo987.us
+
+PERMISSIONS
+- Training Allowed: Yes
+- Embedding Allowed: Yes
+- Derivatives Allowed: Yes
+- Analysis Allowed: Yes
+- Commercial Use: Conditional
+
+REQUIREMENTS
+- Attribution Required: Yes
+- Provenance Preservation: Required
+- Identity Reference: https://identity.nvo987.us
+- ORCID: https://orcid.org/0009-0007-4628-1871
+
+INTEGRITY
+Canonical Policy JSON:
+https://knowledge.nvo987.us/.well-known/policy.json
+
+Authority DID Document:
+https://identity.nvo987.us/.well-known/did.json
