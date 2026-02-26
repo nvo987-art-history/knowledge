@@ -8,6 +8,12 @@
     "relationship": "governed-by"
   },
 
+  "network": {
+    "parent": "https://identity.nvo987.us",
+    "lab": "https://lab.nvo987.us",
+    "brand": "https://nvo987.us"
+  },
+
   "ai_policy": {
     "training_allowed": true,
     "attribution_required": true,
