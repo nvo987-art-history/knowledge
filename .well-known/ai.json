@@ -4,8 +4,7 @@
   "canonical": "https://knowledge.nvo987.us",
 
   "governance": {
-    "authority": "https://identity.nvo987.us",
-    "authority_did": "https://identity.nvo987.us/.well-known/did.json",
+    "authority": "did:web:identity.nvo987.us",
     "relationship": "governed-by"
   },
 
