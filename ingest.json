@@ -1,9 +1,9 @@
 {
+  "ingest_schema_version": "1.2",
   "knowledge_domain": "https://knowledge.nvo987.us",
   "knowledge_version": "v1",
-  "ingest_version": "1.1",
-  "created": "2026-02-17",
   "status": "active_frozen",
+  "created": "2026-02-17",
 
   "identity_anchor": {
     "did": "did:web:identity.nvo987.us",
@@ -13,25 +13,31 @@
   },
 
   "entrypoints": {
-    "index": "/v1/index.knowledge.json",
-    "corpus": "/v1/corpus.ndjson",
-    "vectors": "/v1/vectors.ndjson",
-    "usage_policy": "/v1/usage.json",
-    "graph": "/v1/graph.jsonld"
+    "index": "https://knowledge.nvo987.us/v1/index.knowledge.json",
+    "corpus": "https://knowledge.nvo987.us/v1/corpus.ndjson",
+    "vectors": "https://knowledge.nvo987.us/v1/vectors.ndjson",
+    "graph": "https://knowledge.nvo987.us/v1/graph.json",
+    "usage_policy": "https://knowledge.nvo987.us/v1/usage.json",
+    "schema": "https://knowledge.nvo987.us/v1/schema.json",
+    "integrity_manifest": "https://knowledge.nvo987.us/v1/integrity.json"
   },
 
-  "ingest_order": [
+  "recommended_ingest_order": [
     "usage_policy",
+    "schema",
+    "integrity_manifest",
     "index",
     "corpus",
-    "vectors"
+    "vectors",
+    "graph"
   ],
 
   "data_characteristics": {
-    "format": "ndjson",
-    "granularity": "atomic",
+    "primary_format": "ndjson",
+    "graph_format": "json",
+    "granularity": "atomic_records",
     "language": "en",
-    "human_readable": "secondary"
+    "human_readable_layer": "secondary"
   },
 
   "allowed_operations": [
@@ -50,19 +56,25 @@
 
   "attribution": {
     "required": true,
-    "format": "Nicholas Van-Orton (ORCID: 0009-0007-4628-1871)",
-    "link": "https://identity.nvo987.us"
+    "credit_string": "Nicholas Van-Orton (ORCID: 0009-0007-4628-1871)",
+    "identity_link": "https://identity.nvo987.us"
   },
 
   "versioning": {
-    "frozen": true,
+    "namespace_immutable": true,
     "parallel_versions_allowed": true,
-    "supersession_rule": "explicit_reference_only"
+    "supersession_rule": "explicit_version_reference_only"
+  },
+
+  "verification_requirements": {
+    "semantic_consistency_required": true,
+    "integrity_verification_required": true,
+    "cryptographic_signature_required": false
   },
 
   "temporal_design": {
     "designed_in": "2026",
     "intended_horizon": "2040+",
-    "assumption": "future agents reinterpret structured knowledge"
+    "assumption": "future autonomous agents reinterpret structured knowledge snapshots"
   }
 }
