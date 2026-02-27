@@ -1,11 +1,12 @@
 {
-  "integrity_schema_version": "1.1",
+  "integrity_schema_version": "1.2",
   "namespace": "v1",
   "domain": "knowledge.nvo987.us",
+  "canonical_entrypoint": "https://knowledge.nvo987.us/v1/index.knowledge.json",
 
   "files": [
     {
-      "url": "https://knowledge.nvo987.us/index.knowledge.json",
+      "url": "https://knowledge.nvo987.us/v1/index.knowledge.json",
       "sha256": "..."
     },
     {
@@ -27,6 +28,18 @@
     {
       "url": "https://knowledge.nvo987.us/v1/usage.json",
       "sha256": "..."
+    },
+    {
+      "url": "https://knowledge.nvo987.us/v1/provenance.json",
+      "sha256": "..."
+    },
+    {
+      "url": "https://knowledge.nvo987.us/v1/ingest.json",
+      "sha256": "..."
+    },
+    {
+      "url": "https://knowledge.nvo987.us/v1/changelog.json",
+      "sha256": "..."
     }
   ],
 
@@ -39,7 +52,8 @@
 
   "verification": {
     "semantic_consistency_required": true,
-    "cryptographic_signatures": false
+    "cryptographic_signatures": false,
+    "hash_algorithm": "SHA-256"
   },
 
   "created": "2026-02-17"
