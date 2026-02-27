@@ -1,5 +1,5 @@
 {
-  "descriptor_version": "1.1",
+  "descriptor_version": "1.2",
   "node_type": "knowledge-index",
   "domain": "knowledge.nvo987.us",
   "canonical_entrypoint": "https://knowledge.nvo987.us/v1/index.knowledge.json",
@@ -16,6 +16,7 @@
   "namespaces": {
     "v1": {
       "schema": "https://knowledge.nvo987.us/v1/schema.json",
+      "ontology": "https://knowledge.nvo987.us/v1/ontology.json",
       "corpus": "https://knowledge.nvo987.us/v1/corpus.ndjson",
       "vectors": "https://knowledge.nvo987.us/v1/vectors.ndjson",
       "graph": "https://knowledge.nvo987.us/v1/graph.json",
