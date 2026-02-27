@@ -1,32 +1,18 @@
 {
   "descriptor_version": "1.0",
   "node_type": "knowledge-index",
-
   "domain": "knowledge.nvo987.us",
-  "canonical": "https://knowledge.nvo987.us",
-
   "active_namespace": "v1",
   "status": "frozen",
-
-  "authority": {
-    "did": "did:web:identity.nvo987.us",
-    "did_document": "https://identity.nvo987.us/.well-known/did.json",
-    "orcid": "https://orcid.org/0009-0007-4628-1871"
-  },
 
   "namespaces": {
     "v1": {
       "schema": "https://knowledge.nvo987.us/v1/schema.json",
       "corpus": "https://knowledge.nvo987.us/v1/corpus.ndjson",
-      "graph": "https://knowledge.nvo987.us/v1/graph.json",
       "vectors": "https://knowledge.nvo987.us/v1/vectors.ndjson",
-      "integrity": "https://knowledge.nvo987.us/v1/integrity.json"
+      "graph": "https://knowledge.nvo987.us/v1/graph.json",
+      "integrity": "https://knowledge.nvo987.us/v1/integrity.json",
+      "usage": "https://knowledge.nvo987.us/v1/usage.json"
     }
-  },
-
-  "policy": "https://knowledge.nvo987.us/.well-known/policy.json",
-  "security": "https://knowledge.nvo987.us/.well-known/security.txt",
-
-  "versioning_model": "explicit_version_reference_only",
-  "last_updated": "2026-02-26"
+  }
 }
