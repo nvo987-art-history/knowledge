@@ -3,15 +3,6 @@
   "namespace": "v1",
   "domain": "knowledge.nvo987.us",
 
-  "authority": {
-    "did": "did:web:identity.nvo987.us",
-    "identity_domain": "https://identity.nvo987.us",
-    "primary_domain": "https://nvo987.us",
-    "orcid": "https://orcid.org/0009-0007-4628-1871"
-  },
-
-  "integrity_mode": "structural_frozen",
-
   "files": [
     "https://knowledge.nvo987.us/index.knowledge.json",
     "https://knowledge.nvo987.us/v1/schema.json",
@@ -23,21 +14,13 @@
 
   "mutation_policy": {
     "immutable": true,
-    "backward_modification": false,
     "supersession_model": "explicit_version_reference_only"
   },
 
   "verification": {
     "semantic_consistency_required": true,
-    "cryptographic_signatures": false,
-    "hash_manifest": null
+    "cryptographic_signatures": false
   },
 
-  "upgrade_path": {
-    "next_integrity_layer": "hash_manifest + did_signature",
-    "namespace_trigger": "v2"
-  },
-
-  "created": "2026-02-17",
-  "last_verified": "2026-02-26"
+  "created": "2026-02-17"
 }
