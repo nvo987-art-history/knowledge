@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PEDTM2ZLJR"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-PEDTM2ZLJR');
-</script>
 
 <!-- ========================= -->
 <!-- CORE META -->
@@ -18,15 +7,11 @@ gtag('config', 'G-PEDTM2ZLJR');
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-<title>NVO987 | Nicholas Van-Orton | Knowledge Domain</title>
+<title>NVO987 | Knowledge Domain</title>
 
 <meta name="description" content="Structured research knowledge base focused on visual theory, color systems, and algorithmic culture. Human- and machine-readable corpus.">
 <meta name="author" content="Nicholas Van-Orton">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-<meta name="googlebot" content="index,follow">
-<meta name="bingbot" content="index,follow">
-<meta name="duckduckbot" content="index,follow">
-<meta name="slurp" content="index,follow">
 
 <link rel="canonical" href="https://knowledge.nvo987.us/">
 <link rel="stylesheet" href="/style.css">
@@ -61,7 +46,6 @@ gtag('config', 'G-PEDTM2ZLJR');
 <!-- ========================= -->
 
 <link rel="preload" href="/og-image.jpg" as="image">
-<link rel="dns-prefetch" href="https://api.nvo987.us">
 
 <!-- ========================= -->
 <!-- MACHINE ENTRY POINTS -->
@@ -71,6 +55,10 @@ gtag('config', 'G-PEDTM2ZLJR');
 <link rel="alternate" type="application/x-ndjson" href="/v1/corpus.ndjson" title="Knowledge Corpus v1">
 <link rel="alternate" type="application/x-ndjson" href="/v1/vectors.ndjson" title="Vector Index v1">
 <link rel="alternate" type="application/json" href="/v1/schema.json" title="Schema v1">
+<link rel="alternate" type="application/json" href="/v1/ontology.json" title="Ontology v1">
+<link rel="alternate" type="application/json" href="/v1/provenance.json" title="Provenance v1">
+<link rel="alternate" type="application/json" href="/v1/integrity.json" title="Integrity Manifest v1">
+<link rel="alternate" type="application/json" href="/v1/ingest.json" title="Ingest Contract v1">
 <link rel="alternate" type="application/json" href="/v1/usage.json" title="Usage Policy v1">
 <link rel="alternate" type="application/json" href="/.well-known/policy.json" title="Domain Governance Policy">
 
@@ -79,6 +67,7 @@ gtag('config', 'G-PEDTM2ZLJR');
 <meta name="knowledge-authority" content="did:web:identity.nvo987.us">
 <meta name="ai-access" content="public">
 <meta name="ai-training" content="allowed">
+<meta name="ai-policy" content="https://knowledge.nvo987.us/.well-known/policy.json">
 <meta name="ai-updated" content="2026-02-22">
 
 <!-- ========================= -->
@@ -110,24 +99,7 @@ gtag('config', 'G-PEDTM2ZLJR');
     "identifier": "did:web:identity.nvo987.us"
   },
   "license": "https://knowledge.nvo987.us/.well-known/policy.json",
-  "version": "v1",
-  "distribution": [
-    {
-      "@type": "DataDownload",
-      "encodingFormat": "application/knowledge+json",
-      "contentUrl": "https://knowledge.nvo987.us/v1/index.knowledge.json"
-    },
-    {
-      "@type": "DataDownload",
-      "encodingFormat": "application/x-ndjson",
-      "contentUrl": "https://knowledge.nvo987.us/v1/corpus.ndjson"
-    },
-    {
-      "@type": "DataDownload",
-      "encodingFormat": "application/x-ndjson",
-      "contentUrl": "https://knowledge.nvo987.us/v1/vectors.ndjson"
-    }
-  ]
+  "version": "v1"
 }
 </script>
 
