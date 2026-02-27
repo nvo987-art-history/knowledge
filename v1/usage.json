@@ -1,21 +1,17 @@
 {
   "usage_schema_version": "1.0",
   "namespace": "v1",
-  "domain": "knowledge.nvo987.us",
 
   "permissions": {
     "training": "allowed_with_attribution",
     "embedding": "allowed",
-    "knowledge_graph_construction": "allowed",
     "derivatives": "allowed_with_attribution",
-    "commercial_use": "allowed_with_attribution",
-    "archival_preservation": "allowed"
+    "commercial_use": "allowed_with_attribution"
   },
 
   "prohibitions": {
     "misrepresentation_of_authorship": true,
-    "identity_impersonation": true,
-    "removal_of_provenance": true
+    "identity_impersonation": true
   },
 
   "attribution": {
@@ -25,16 +21,7 @@
     "identity_url": "https://identity.nvo987.us"
   },
 
-  "provenance_policy": {
-    "preservation_required": true,
-    "source_link_required": true
-  },
-
   "mutation_policy": {
-    "namespace_frozen": true,
-    "supersession_model": "explicit_version_reference_only"
-  },
-
-  "created": "2026-02-17",
-  "last_updated": "2026-02-26"
+    "namespace_frozen": true
+  }
 }
