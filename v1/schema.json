@@ -1,27 +1,51 @@
 {
   "$id": "https://knowledge.nvo987.us/v1/schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-
   "title": "NVO987 Knowledge Base v1 Schema",
+  "description": "Validation schema for corpus and vector entries in v1 namespace.",
   "type": "object",
+
+  "oneOf": [
+    { "$ref": "#/$defs/concept" },
+    { "$ref": "#/$defs/claim" },
+    { "$ref": "#/$defs/source" },
+    { "$ref": "#/$defs/vector" }
+  ],
 
   "$defs": {
 
+    "canonical_id": {
+      "type": "string",
+      "pattern": "^https://knowledge\\.nvo987\\.us/v1#[A-Za-z0-9\\-]+$"
+    },
+
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+
     "concept": {
       "type": "object",
-      "required": ["id", "type", "title", "definition", "epistemic_status", "created"],
+      "required": [
+        "id",
+        "type",
+        "title",
+        "definition",
+        "epistemic_status",
+        "created"
+      ],
       "properties": {
-        "id": { "type": "string", "format": "uri" },
+        "id": { "$ref": "#/$defs/canonical_id" },
         "type": { "const": "concept" },
         "title": { "type": "string" },
         "definition": { "type": "string" },
         "epistemic_status": { "type": "string" },
-        "created": { "type": "string", "format": "date" },
+        "created": { "$ref": "#/$defs/date" },
         "label": { "type": "string" },
         "notes": { "type": "string" },
         "supported_by": {
           "type": "array",
-          "items": { "type": "string", "format": "uri" }
+          "items": { "$ref": "#/$defs/canonical_id" }
         }
       },
       "additionalProperties": false
@@ -29,21 +53,28 @@
 
     "claim": {
       "type": "object",
-      "required": ["id", "type", "claim", "derived_from", "created"],
+      "required": [
+        "id",
+        "type",
+        "claim",
+        "derived_from",
+        "created"
+      ],
       "properties": {
-        "id": { "type": "string", "format": "uri" },
+        "id": { "$ref": "#/$defs/canonical_id" },
         "type": { "const": "claim" },
         "claim": { "type": "string" },
-        "derived_from": {
-          "type": "string",
-          "format": "uri"
+        "derived_from": { "$ref": "#/$defs/canonical_id" },
+        "created": { "$ref": "#/$defs/date" },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
         },
-        "created": { "type": "string", "format": "date" },
-        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
         "scope": { "type": "string" },
         "supported_by": {
           "type": "array",
-          "items": { "type": "string", "format": "uri" }
+          "items": { "$ref": "#/$defs/canonical_id" }
         }
       },
       "additionalProperties": false
@@ -51,9 +82,15 @@
 
     "source": {
       "type": "object",
-      "required": ["id", "type", "media", "title", "file"],
+      "required": [
+        "id",
+        "type",
+        "media",
+        "title",
+        "file"
+      ],
       "properties": {
-        "id": { "type": "string", "format": "uri" },
+        "id": { "$ref": "#/$defs/canonical_id" },
         "type": { "const": "source" },
         "media": { "type": "string" },
         "title": { "type": "string" },
@@ -69,19 +106,37 @@
 
     "vector": {
       "type": "object",
-      "required": ["id", "corpus_id", "vector_type", "semantic_axes", "created"],
+      "required": [
+        "id",
+        "corpus_id",
+        "vector_type",
+        "semantic_axes",
+        "created"
+      ],
       "properties": {
-        "id": { "type": "string", "format": "uri" },
-        "corpus_id": { "type": "string", "format": "uri" },
-        "vector_type": { "type": "string" },
+        "id": { "$ref": "#/$defs/canonical_id" },
+        "corpus_id": { "$ref": "#/$defs/canonical_id" },
+        "vector_type": {
+          "type": "string",
+          "enum": [
+            "concept_embedding",
+            "claim_embedding",
+            "source_embedding"
+          ]
+        },
         "semantic_axes": {
           "type": "object",
-          "additionalProperties": { "type": "number" }
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "number",
+            "minimum": 0
+          }
         },
-        "created": { "type": "string", "format": "date" },
-        "embedding_hint": { "type": "string" }
+        "embedding_model": { "type": "string" },
+        "created": { "$ref": "#/$defs/date" }
       },
       "additionalProperties": false
     }
+
   }
 }
