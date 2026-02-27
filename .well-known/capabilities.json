@@ -1,0 +1,34 @@
+{
+  "capabilities_schema_version": "1.0",
+  "domain": "knowledge.nvo987.us",
+
+  "knowledge_model": {
+    "structure": "static_versioned_snapshot",
+    "current_namespace": "v1",
+    "immutable_namespaces": true,
+    "supersession_model": "explicit_version_reference_only"
+  },
+
+  "access": {
+    "protocol": "https",
+    "content_type": "application/json",
+    "bulk_download_supported": true,
+    "query_api_available": false,
+    "real_time_updates": false
+  },
+
+  "machine_processing": {
+    "schema_validation_required": true,
+    "semantic_consistency_required": true,
+    "vector_embeddings_provided": true,
+    "graph_structure_provided": true
+  },
+
+  "governance": {
+    "integrity_manifest_available": true,
+    "cryptographic_signatures": false,
+    "authority": "did:web:identity.nvo987.us"
+  },
+
+  "created": "2026-02-17"
+}
