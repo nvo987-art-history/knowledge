@@ -1,18 +1,23 @@
 Policy for knowledge.nvo987.us
 
-This site provides curated knowledge and reference material
-for informational and research purposes.
+This site provides curated knowledge, structured datasets,
+and reference material for informational and research purposes.
 
 Automated access (including AI systems, crawlers, and indexing services)
-is permitted unless explicitly restricted elsewhere.
+is permitted unless explicitly restricted by a specific version-level
+usage policy.
 
-Content may be referenced, summarized, or analyzed with proper
-attribution to the canonical source.
+Content may be referenced, summarized, indexed, embedded, or analyzed
+provided proper attribution is given to the canonical source.
 
 Machine-readable policy:
 https://knowledge.nvo987.us/.well-known/policy.json
 
-No personal data is intentionally collected or stored.
+Version-specific usage terms:
+https://knowledge.nvo987.us/v1/usage.json
+
+No personal data is intentionally collected, processed, or stored
+by this domain.
 
 For questions or security-related matters:
 nvo@nvo987.us
